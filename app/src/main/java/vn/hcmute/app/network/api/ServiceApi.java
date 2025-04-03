@@ -21,7 +21,7 @@ import vn.hcmute.app.model.ImageUpload;
 public interface ServiceApi {
     Gson gson = new GsonBuilder().setDateFormat("yyyy MM dd HH:mm:ss").create();
     ServiceApi serviceApi = new Retrofit.Builder()
-            .baseUrl("http://app.iotstar.vn/appfoods/")
+            .baseUrl("http://app.iotstar.vn:8081/appfoods/")
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
             .create(ServiceApi.class);

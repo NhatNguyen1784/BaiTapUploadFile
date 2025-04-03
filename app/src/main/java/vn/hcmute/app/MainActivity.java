@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     private Button btnChoose, btnUpload;
     private TextView tvUserName;
     private Uri mUri;
-    private ProgressBar mProgressBar;
     public static final int MY_REQUEST_CODE = 100;
     public static final String TAG = MainActivity.class.getName();
 
@@ -94,6 +93,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
         anhXa();
+        // Lấy dữ liệu từ Intent
+        Intent intent = getIntent();
+        if(intent != null){
+            String username = intent.getStringExtra("username");
+
+            // gan vao textview va edt
+            if(username != null){
+                edtUserName.setText(username);
+                tvUserName.setText(username);
+            }
+        }
+
         // bat su kien nut chon anh
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override

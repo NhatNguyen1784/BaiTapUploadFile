@@ -51,7 +51,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUserName"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:src="@drawable/avatar" />
 
     <ImageView
         android:id="@+id/imgUpload"
